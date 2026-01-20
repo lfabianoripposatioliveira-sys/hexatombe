@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>HEXATOMBE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #050505;
+      color: #b30000;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+      max-width: 600px;
+    }
+    h1 {
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+    }
+    p {
+      line-height: 1.6;
+      color: #cccccc;
+    }
+    .pulse {
+      margin: 40px auto;
+      width: 12px;
+      height: 12px;
+      background: #b30000;
+      border-radius: 50%;
+      animation: pulse 1.7s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.8); opacity: 0.4; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HEXATOMBE</h1>
+    <p>
+      Seis equipes.<br />
+      Seis ritmos.<br />
+      Um por noite.
+    </p><div class="pulse"></div>
+
+<p>
+  O ciclo já começou.<br />
+  Esperar não interrompe.<br />
+  O silêncio também escolhe.
+</p>
+
+<div class="footer">
+  <p>03:17</p>
+</div>
+
+  </div>
+</body>
+</html>
