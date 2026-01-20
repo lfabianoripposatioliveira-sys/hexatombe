@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>acesso restrito</title>
+  <style>
+    body {
+      background: black;
+      color: #cfcfcf;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+    }
+
+    input {
+      background: #111;
+      border: 1px solid #333;
+      color: #00ffcc;
+      padding: 10px;
+      width: 200px;
+      font-family: monospace;
+      text-align: center;
+    }
+
+    button {
+      background: #111;
+      border: 1px solid #333;
+      color: #7b0000;
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-family: monospace;
+      cursor: pointer;
+    }
+
+    #erro {
+      color: #7b0000;
+      margin-top: 15px;
+      display: none;
+    }
+
+    #conteudo {
+      display: none;
+      text-align: left;
+      margin-top: 30px;
+    }
+
+    h1, h2 {
+      color: #7b0000;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div id="login">
+    <p>ACESSO RESTRITO</p>
+    <p>Insira a chave de continuidade:</p>
+    <input type="password" id="senha" placeholder="•••••••">
+    <br>
+    <button onclick="verificar()">ACESSAR</button>
+    <p id="erro">impulso incorreto</p>
+  </div>
+
+  <div id="conteudo">
+    <h1>RELATÓRIO COMPLETO — HEXATOMBE</h1>
+
+    <h2>DECLARAÇÃO DO ANFITRIÃO</h2>
+    <p>
+      O jogo não é entretenimento.<br>
+      É preparação.
+    </p>
+
+    <p>
+      Sangue e Energia foram escolhidos porque se movem.<br>
+      Morte espera.<br>
+      Conhecimento observa demais.
+    </p>
+
+    <p>
+      A Hexatombe cria algo que os outros elementos não conseguem:
+      decisão sob pressão contínua.
+    </p>
+
+    <h2>MANIFESTO DO DIABO</h2>
+    <p>
+      Eles chamam de sacrifício porque não entendem troca.
+    </p>
+
+    <p>
+      Morte acumula.<br>
+      Conhecimento paralisa.
+    </p>
+
+    <p>
+      Guerra não começa com exércitos.<br>
+      Começa com aceitação.
+    </p>
+
+    <p>
+      Quando restarem seis,<br>
+      não teremos sobreviventes.<br>
+      Teremos aliados.
+    </p>
+
+    <h2>OBJETIVO FINAL</h2>
+    <p>
+      Romper a estabilidade entre os elementos.<br>
+      Forçar Morte e Conhecimento a reagirem.<br>
+      Converter observadores em participantes.
+    </p>
+
+    <p>
+      A guerra não será anunciada.<br>
+      Ela já começou.
+    </p>
+  </div>
+
+</div>
+
+<script>
+  function verificar() {
+    const senha = document.getElementById("senha").value.toLowerCase();
+    if (senha === "impulso") {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("conteudo").style.display = "block";
+    } else {
+      document.getElementById("erro").style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
